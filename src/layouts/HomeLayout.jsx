@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Display from '../components/Display';
+import ProductShowcase from '../components/ProductShowcase';
 
 const HomeLayout = () => {
     return (
@@ -17,7 +18,8 @@ const HomeLayout = () => {
                     <Hero></Hero>
                 </section>
                 <section>
-                    <Display></Display>
+                    {/* <Display></Display> */}
+                    <ProductShowcase></ProductShowcase>
                 </section>
             </main>
             <footer>
