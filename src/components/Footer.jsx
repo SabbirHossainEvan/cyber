@@ -22,9 +22,9 @@ const Footer = () => {
       transition={{ duration: 0.8 }}
       className="bg-black text-gray-300 py-10 px-6 md:px-16 lg:px-28"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 justify-center  md:justify-between mx-auto">
         {/* Brand Section */}
-        <div>
+        <div className="grid-cols-6">
           <h2 className="text-white text-2xl font-bold mb-3">cyber</h2>
           <p className="text-sm leading-relaxed">
             We are a residential interior design firm located in Portland.
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         {/* Services */}
-        <div>
+        <div className="grid-cols-3">
           <h3 className="text-white font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-sm">
             <li className="hover:text-white cursor-pointer transition">Bonus program</li>
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
 
         {/* Assistance */}
-        <div>
+        <div className="grid-cols-3 justify-end">
           <h3 className="text-white font-semibold mb-4">Assistance to the buyer</h3>
           <ul className="space-y-2 text-sm">
             <li className="hover:text-white cursor-pointer transition">Find an order</li>
@@ -73,14 +73,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500"
-      >
-        © {new Date().getFullYear()} cyber. All rights reserved.
-      </motion.div>
+  
     </motion.footer>
   );
 };

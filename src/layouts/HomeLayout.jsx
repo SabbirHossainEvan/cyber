@@ -2,6 +2,8 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import Display from '../components/Display';
 
 const HomeLayout = () => {
     return (
@@ -10,14 +12,16 @@ const HomeLayout = () => {
                 <NavBar></NavBar>
             </header>
             <main>
-                <Outlet>
-                    <section>
-                        
-                    </section>
-                </Outlet>
+
+                <section>
+                    <Hero></Hero>
+                </section>
+                <section>
+                    <Display></Display>
+                </section>
             </main>
             <footer>
-                <Footer></Footer>
+                {/* <Footer></Footer> */}
             </footer>
         </div>
     );

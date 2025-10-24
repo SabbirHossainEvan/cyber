@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="bg-white shadow-md fixed w-full z-50"
+      className="bg-white fixed w-full z-50"
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -48,8 +48,8 @@ const Navbar = () => {
                   to={link.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-600 font-semibold"
-                      : "text-gray-700 hover:text-blue-600 transition-colors"
+                      ? "text-gray-1000 font-semibold"
+                      : "text-gray-700 hover:text-gray-1000 transition-colors"
                   }
                 >
                   {link.name}
