@@ -32,13 +32,13 @@ import heroImage from '../assets/Iphone Image.png';
 const Hero = () => {
   return (
     <section className='bg-black text-white'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center p-8 md:p-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto pt-20'>
         
         {/* Left side (Text content) */}
         <div>
-          <h3 className='text-gray-400 text-lg md:text-xl font-medium mt-10'>Pro.Beyond.</h3>
-          <h1 className='text-5xl md:text-7xl font-bold mt-2'>
-            iPhone 14 <span className='text-gray-400'>Pro</span>
+          <h3 className='text-gray-400 text-lg md:text-3xl font-medium mt-10'>Pro.Beyond.</h3>
+          <h1 className='text-5xl md:text-[100px] mt-3'>
+            iPhone 14 <span className='font-bold'>Pro</span>
           </h1>
           <p className='text-gray-300 mt-4'>
             Created to change everything for the better. For everyone.
@@ -54,7 +54,7 @@ const Hero = () => {
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 300 }}
-            className='mt-8 px-8 py-3 border border-white rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300'
+            className='mt-8 px-20 py-5 border border-white rounded-md font-semibold hover:bg-white hover:text-black transition-all duration-300'
           >
             Shop Now
           </motion.button>

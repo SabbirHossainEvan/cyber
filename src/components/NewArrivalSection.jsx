@@ -67,7 +67,7 @@ const products = [
 
 const NewArrivalSection = () => {
     return (
-        <section className="px-6 py-12 bg-white max-w-6xl mx-auto px-6">
+        <section className=" py-12 bg-white max-w-6xl mx-auto px-6">
             <div className="flex space-x-6 border-b mb-8 text-gray-500 font-medium">
                 <button className="text-black border-b-2 border-black pb-2">New Arrival</button>
                 <button>Bestseller</button>
