@@ -6,6 +6,8 @@ import Hero from '../components/Hero';
 import ProductShowcase from '../components/ProductShowcase';
 import CategorySection from '../components/CategorySection';
 import NewArrivalSection from '../components/NewArrivalSection';
+import PopularProducts from '../components/PopularProducts';
+import DiscountProducts from '../components/DiscountProducts';
 
 const HomeLayout = () => {
     return (
@@ -27,6 +29,12 @@ const HomeLayout = () => {
                 </section>\
                 <section>
                     <NewArrivalSection></NewArrivalSection>
+                </section>
+                <section>
+                    <PopularProducts></PopularProducts>
+                </section>
+                <section>
+                    <DiscountProducts></DiscountProducts>
                 </section>
             </main>
             <footer>
