@@ -7,25 +7,25 @@ const products = [
     id: 1,
     name: "Apple iPhone 14 Pro 512GB Gold (MQ233)",
     price: "$1437",
-    image: "https://via.placeholder.com/200x200?text=iPhone+14+Pro+Gold",
+    image: "/public/discountProducts.jsx/Iphone 14 pro 1 (1).png",
   },
   {
     id: 2,
     name: "AirPods Max Silver Starlight Aluminium",
     price: "$549",
-    image: "https://via.placeholder.com/200x200?text=AirPods+Max",
+    image: "/public/discountProducts.jsx/Iphone 14 pro 1 (2).png",
   },
   {
     id: 3,
     name: "Apple Watch Series 9 GPS 41mm Starlight Aluminium",
     price: "$399",
-    image: "https://via.placeholder.com/200x200?text=Apple+Watch+S9",
+    image: "/public/discountProducts.jsx/Iphone 14 pro 1 (3).png",
   },
   {
     id: 4,
     name: "Apple iPhone 14 Pro 1TB Gold (MQ2V3)",
     price: "$1499",
-    image: "https://via.placeholder.com/200x200?text=iPhone+14+Pro+1TB",
+    image: "/public/discountProducts.jsx/Iphone 14 pro 1 (8).png",
   },
 ];
 
