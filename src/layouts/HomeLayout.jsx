@@ -3,8 +3,9 @@ import { Outlet } from 'react-router';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import Display from '../components/Display';
 import ProductShowcase from '../components/ProductShowcase';
+import CategorySection from '../components/CategorySection';
+import NewArrivalSection from '../components/NewArrivalSection';
 
 const HomeLayout = () => {
     return (
@@ -20,6 +21,12 @@ const HomeLayout = () => {
                 <section>
                     {/* <Display></Display> */}
                     <ProductShowcase></ProductShowcase>
+                </section>
+                <section>
+                    <CategorySection></CategorySection>
+                </section>\
+                <section>
+                    <NewArrivalSection></NewArrivalSection>
                 </section>
             </main>
             <footer>
