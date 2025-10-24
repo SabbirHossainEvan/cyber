@@ -36,7 +36,7 @@ const Hero = () => {
         
         {/* Left side (Text content) */}
         <div>
-          <h3 className='text-gray-400 text-lg md:text-xl font-medium'>Pro.Beyond.</h3>
+          <h3 className='text-gray-400 text-lg md:text-xl font-medium mt-10'>Pro.Beyond.</h3>
           <h1 className='text-5xl md:text-7xl font-bold mt-2'>
             iPhone 14 <span className='text-gray-400'>Pro</span>
           </h1>

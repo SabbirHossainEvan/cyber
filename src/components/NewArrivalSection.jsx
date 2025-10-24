@@ -14,7 +14,7 @@ const products = [
         id: 2,
         name: "Blackmagic Pocket Cinema Camera 6k",
         price: "$2535",
-        image: "/public/newArrivalSectionImage/Iphone 14 pro 1.png",
+        image: "/public/newArrivalSectionImage/chemara.png",
         liked: false,
     },
     {

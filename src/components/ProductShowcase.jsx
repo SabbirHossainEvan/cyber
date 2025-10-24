@@ -7,19 +7,19 @@ import macBook from '../assets/MacBook Pro 14.png';
 
 const ProductShowcase = () => {
     return (
-        <section className="bg-white text-gray-900">
+        <section className="bg-white text-gray-900 mt-10">
             <div className="grid md:grid-cols-2">
                 <div>
                     <div className="">
                         <motion.div
                             whileHover={{ scale: 1.03 }}
                             transition={{ type: "spring", stiffness: 200 }}
-                            className="bg-gray-100  flex flex-col md:flex-row items-center justify-between h-126"
+                            className="bg-gray-100  flex flex-col md:flex-row items-center justify-between h-full p-5 md:p-0 md:h-126"
                         >
                             <img src={playStation} alt="Playstation 5" className="w-1/2 md:w-3/5" />
                             <div className="md:ml-6 mt-6 md:mt-0">
-                                <h2 className="text-3xl font-bold mb-2">Playstation 5</h2>
-                                <p className="text-gray-600">
+                                <h2 className="text-3xl font-bold mb-2 text-center">Playstation 5</h2>
+                                <p className="text-gray-600 text-center">
                                     Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O
                                     will redefine your PlayStation experience.
                                 </p>
@@ -35,8 +35,8 @@ const ProductShowcase = () => {
                             className="bg-white  flex flex-col md:flex-row items-center justify-between shadow-md"
                         >
                             <img src={headPhone} alt="AirPods Max" className="w-1/2 md:w-1/3" />
-                            <div className="md:ml-6 mt-6 md:mt-0">
-                                <h2 className="text-3xl font-bold">
+                            <div className="md:ml-6 mt-6 md:mt-0 p-2 md:p-0">
+                                <h2 className="text-2xl md:text-3xl font-bold">
                                     Apple <span className="text-gray-700">AirPods Max</span>
                                 </h2>
                                 <p className="text-gray-600">
@@ -51,8 +51,8 @@ const ProductShowcase = () => {
                             transition={{ type: "spring", stiffness: 200 }}
                             className="bg-black text-white flex flex-col md:flex-row items-center justify-between"
                         >
-                            <div className="md:ml-6 mt-6 md:mt-0">
-                                <h2 className="text-3xl font-bold">Apple Vision Pro</h2>
+                            <div className="md:ml-6 mt-6 p-2 md:p-0 md:mt-0">
+                                <h2 className="text-2xl md:text-3xl font-bold">Apple Vision Pro</h2>
                                 <p className="text-gray-400">
                                     An immersive way to experience entertainment.
                                 </p>
@@ -72,9 +72,9 @@ const ProductShowcase = () => {
                     transition={{ type: "spring", stiffness: 200 }}
                     className="bg-gray-50 flex flex-col md:flex-row items-center justify-between"
                 >
-                    <div className="md:ml-6 mt-6 md:mt-0">
-                        <h2 className="text-3xl font-bold mb-2">Macbook <span className="text-gray-700">Air</span></h2>
-                        <p className="text-gray-600 mb-4">
+                    <div className="md:ml-6 mt-6 md:mt-0 ">
+                        <h2 className="text-3xl font-bold mb-2 text-center">Macbook <span className="text-gray-700">Air</span></h2>
+                        <p className="text-gray-600 mb-4 text-center p-2">
                             The new 15-inch MacBook Air makes room for more of what you love
                             with a spacious Liquid Retina display.
                         </p>
@@ -84,12 +84,12 @@ const ProductShowcase = () => {
                                 backgroundColor: "#111",
                                 color: "#fff",
                             }}
-                            className="px-5 py-2 border border-gray-800 rounded-full font-semibold transition"
+                            className="px-5 py-2 border border-gray-800 rounded-5 font-semibold transition mx-auto flex"
                         >
                             Shop Now
                         </motion.button>
                     </div>
-                    <img src={macBook} alt="MacBook Air" className="w-1/2 md:w-1/3" />
+                    <img src={macBook} alt="MacBook Air" className="w-1/2 md:w-1/3 mt-5" />
                 </motion.div>
             </div>
         </section>

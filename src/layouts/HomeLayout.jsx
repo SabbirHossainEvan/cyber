@@ -21,7 +21,6 @@ const HomeLayout = () => {
                     <Hero></Hero>
                 </section>
                 <section>
-                    {/* <Display></Display> */}
                     <ProductShowcase></ProductShowcase>
                 </section>
                 <section>
@@ -38,7 +37,7 @@ const HomeLayout = () => {
                 </section>
             </main>
             <footer>
-                {/* <Footer></Footer> */}
+                <Footer></Footer>
             </footer>
         </div>
     );
