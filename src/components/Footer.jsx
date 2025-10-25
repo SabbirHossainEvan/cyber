@@ -48,7 +48,7 @@ const Footer = () => {
         {/* Services */}
         <div className=" mt-5">
           <h3 className="text-white font-semibold mb-4">Services</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
             <li className="hover:text-white cursor-pointer transition">Bonus program</li>
             <li className="hover:text-white cursor-pointer transition">Gift cards</li>
             <li className="hover:text-white cursor-pointer transition">Credit and payment</li>
@@ -61,7 +61,7 @@ const Footer = () => {
         {/* Assistance */}
         <div className="mt-5">
           <h3 className="text-white font-semibold mb-4 justify-end block">Assistance to the buyer</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
             <li className="hover:text-white cursor-pointer transition">Find an order</li>
             <li className="hover:text-white cursor-pointer transition">Terms of delivery</li>
             <li className="hover:text-white cursor-pointer transition">Exchange & return of goods</li>

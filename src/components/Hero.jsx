@@ -1,39 +1,16 @@
-// import React from 'react';
-// // import heroImage from '../assets/hero-image.jpg';
-// import heroImage from '../assets/Iphone Image.png';
 
-// const Hero = () => {
-//     return (
-//         <section className='bg-black'>
-//             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center p-8 md:p-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white justify-between'>
-//                 <div className='grid-span-8'>
-//                     <h3>Pro.Beyond.</h3>
-//                     <h1 className=''>IPhone 14 <span>Pro</span></h1>
-//                     <p>Created to change everything for the better. For everyone</p>
-//                     <button className=''>Shop Now</button>
-//                 </div>
-//                 <div className='grid-span-4 flex justify-center md:justify-end'>
-//                     <img src={heroImage} alt="Hero" className='w-80' />
-//                 </div>
-                
-//             </div>
-//         </section>
-
-//     );
-// };
-
-// export default Hero;
 
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/Iphone Image.png';
+import { Link } from 'react-router';
 
 const Hero = () => {
   return (
     <section className='bg-black text-white'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto pt-20'>
-        
+
         {/* Left side (Text content) */}
         <div>
           <h3 className='text-gray-400 text-lg md:text-3xl font-medium mt-10'>Pro.Beyond.</h3>
@@ -45,19 +22,21 @@ const Hero = () => {
           </p>
 
           {/* Animated Button */}
-          <motion.button
-            whileHover={{
-              scale: 1.1,
-              boxShadow: '0px 0px 12px rgba(255,255,255,0.5)',
-              backgroundColor: '#ffffff',
-              color: '#000000',
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-            className='mt-8 px-20 py-5 border border-white rounded-md font-semibold hover:bg-white hover:text-black transition-all duration-300'
-          >
-            Shop Now
-          </motion.button>
+          <Link to="/shopLayouts">
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                boxShadow: '0px 0px 12px rgba(255,255,255,0.5)',
+                backgroundColor: '#ffffff',
+                color: '#000000',
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              className='mt-8 px-20 py-5 border border-white rounded-md font-semibold hover:bg-white hover:text-black transition-all duration-300'
+            >
+              Shop Now
+            </motion.button>
+          </Link>
         </div>
 
         {/* Right side (Hero image) */}
