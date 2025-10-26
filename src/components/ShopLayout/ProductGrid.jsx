@@ -1,63 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart } from "lucide-react";
+import { Link } from "react-router";
 
 const products = [
-  {
-    id: 1,
-    name: "Apple iPhone 14 Pro 512GB Gold (MQ233)",
-    price: 1437,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (1).png",
-  },
-  {
-    id: 2,
-    name: "Apple iPhone 11 128GB White (MQ233)",
-    price: 510,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (2).png",
-  },
-  {
-    id: 3,
-    name: "Apple iPhone 14 Pro 128GB Deep Purple (MQ093)",
-    price: 1600,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (3).png",
-  },
-  {
-    id: 4,
-    name: "Apple iPhone 13 mini 128GB Pink (MLK23)",
-    price: 850,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (9).png",
-  },
-  {
-    id: 5,
-    name: "Apple iPhone 14 Pro 256GB Space Black (MQ073)",
-    price: 1399,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (10).png",
-  },
-  {
-    id: 6,
-    name: "Apple iPhone 14 Pro 256GB Silver (MQ103)",
-    price: 1399,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (11).png",
-  },
-  // 🆕 Added 3 more cards below
-  {
-    id: 7,
-    name: "Apple iPhone 14 128GB Midnight (MQ3A3)",
-    price: 999,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (12).png",
-  },
-  {
-    id: 8,
-    name: "Apple iPhone 14 Plus 512GB Starlight (MQ513)",
-    price: 1299,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (13).png",
-  },
-  {
-    id: 9,
-    name: "Apple iPhone 15 Pro 512GB Blue Titanium (MT233)",
-    price: 1699,
-    image: "/public/shopLayoutImage/Iphone 14 pro 1 (14).png",
-  },
+  { id: 1, name: "Apple iPhone 14 Pro 512GB Gold (MQ233)", price: 1437, image: "/public/shopLayoutImage/Iphone 14 pro 1 (1).png" },
+  { id: 2, name: "Apple iPhone 11 128GB White (MQ233)", price: 510, image: "/public/shopLayoutImage/Iphone 14 pro 1 (2).png" },
+  { id: 3, name: "Apple iPhone 14 Pro 128GB Deep Purple (MQ093)", price: 1600, image: "/public/shopLayoutImage/Iphone 14 pro 1 (3).png" },
+  { id: 4, name: "Apple iPhone 13 mini 128GB Pink (MLK23)", price: 850, image: "/public/shopLayoutImage/Iphone 14 pro 1 (9).png" },
+  { id: 5, name: "Apple iPhone 14 Pro 256GB Space Black (MQ073)", price: 1399, image: "/public/shopLayoutImage/Iphone 14 pro 1 (10).png" },
+  { id: 6, name: "Apple iPhone 14 Pro 256GB Silver (MQ103)", price: 1399, image: "/public/shopLayoutImage/Iphone 14 pro 1 (11).png" },
+  { id: 7, name: "Apple iPhone 14 128GB Midnight (MQ3A3)", price: 999, image: "/public/shopLayoutImage/Iphone 14 pro 1 (12).png" },
+  { id: 8, name: "Apple iPhone 14 Plus 512GB Starlight (MQ513)", price: 1299, image: "/public/shopLayoutImage/Iphone 14 pro 1 (13).png" },
+  { id: 9, name: "Apple iPhone 15 Pro 512GB Blue Titanium (MT233)", price: 1699, image: "/public/shopLayoutImage/Iphone 14 pro 1 (14).png" },
 ];
 
 export default function ProductGrid() {
@@ -65,7 +20,7 @@ export default function ProductGrid() {
   const [sortBy, setSortBy] = useState("rating");
   const [displayedProducts, setDisplayedProducts] = useState([]);
 
-  // Staggered load animation
+  // Delay product load for animation
   useEffect(() => {
     const timeout = setTimeout(() => {
       setDisplayedProducts(products);
@@ -79,18 +34,28 @@ export default function ProductGrid() {
     );
   };
 
-  // Motion Variants for staggered and hover animations
+  // Slide Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.08 },
+      transition: { staggerChildren: 0.12 },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4 } },
+    hidden: (i) => ({
+      opacity: 0,
+      x: i % 2 === 0 ? -80 : 80, // alternate slide from left/right
+      y: 30,
+    }),
+    show: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 15, duration: 0.5 },
+    },
+    exit: { opacity: 0, y: 50, transition: { duration: 0.3 } },
   };
 
   return (
@@ -112,30 +77,30 @@ export default function ProductGrid() {
         </select>
       </div>
 
-      {/* Animated Product Grid */}
+      {/* Animated Grid */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        layout
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <AnimatePresence>
-          {displayedProducts.map((product) => (
+          {displayedProducts.map((product, index) => (
             <motion.div
               key={product.id}
-              layout
+              custom={index}
               variants={cardVariants}
+              exit="exit"
               whileHover={{
-                scale: 1.04,
+                scale: 1.05,
                 y: -5,
                 boxShadow:
                   "0 8px 20px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.05)",
               }}
               whileTap={{ scale: 0.97 }}
-              className="bg-base-300 rounded-2xl relative overflow-hidden transition-all"
+              className="bg-gray-100 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-xl transition-all"
             >
-              {/* Floating Heart Animation */}
+              {/* Heart Icon */}
               <motion.button
                 whileTap={{ scale: 0.7 }}
                 onClick={() => toggleFavorite(product.id)}
@@ -143,11 +108,10 @@ export default function ProductGrid() {
               >
                 <Heart
                   size={22}
-                  className={`${
-                    favorites.includes(product.id)
+                  className={`${favorites.includes(product.id)
                       ? "fill-red-500 text-red-500"
                       : "text-gray-400"
-                  } transition-colors duration-200`}
+                    } transition-colors duration-200`}
                 />
               </motion.button>
 
@@ -155,52 +119,48 @@ export default function ProductGrid() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="flex justify-center items-center p-5"
               >
                 <motion.img
                   src={product.image}
                   alt={product.name}
                   className="h-48 object-contain select-none"
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.07 }}
                   transition={{ type: "spring", stiffness: 200 }}
                 />
               </motion.div>
 
-              {/* Info */}
-              <motion.div
-                className="px-4 pb-4 text-center"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15, duration: 0.4 }}
-              >
+              {/* Info Section */}
+              <div className="px-4 pb-4 text-center">
                 <p className="text-sm text-gray-800 font-medium line-clamp-2 h-10">
                   {product.name}
                 </p>
                 <motion.p
                   className="text-xl font-semibold mt-2"
-                  layout
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
                 >
                   ${product.price}
                 </motion.p>
 
-                {/* Animated Button */}
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    backgroundColor: "#111",
-                    boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="mt-3 w-full bg-black text-white py-2 rounded-xl transition-all"
-                >
-                  Buy Now
-                </motion.button>
-              </motion.div>
+                <Link to="/ProductDetailsLayout">
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      backgroundColor: "#111",
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="mt-3 w-full bg-black text-white py-2 rounded-xl transition-all"
+                  >
+                    Buy Now
+                  </motion.button>
+                </Link>
+
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>
@@ -223,3 +183,4 @@ export default function ProductGrid() {
     </div>
   );
 }
+
