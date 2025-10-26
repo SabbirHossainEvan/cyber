@@ -5,6 +5,7 @@ import DetailsSection from '../components/ProductDetails/DetailsSection';
 import ReviewsSection from '../components/ProductDetails/ReviewsSection';
 import UserReviewsSection from '../components/ProductDetails/UserReviewsSection';
 import DiscountProducts from '../components/DiscountProducts';
+import Footer from '../components/Footer';
 
 const ProductDetailsLayout = () => {
     return (
@@ -28,6 +29,9 @@ const ProductDetailsLayout = () => {
                 <section>
                     <DiscountProducts></DiscountProducts>
                 </section>
+                <footer>
+                    <Footer></Footer>
+                </footer>
             </main>
         </div>
     );
