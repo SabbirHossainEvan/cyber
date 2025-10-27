@@ -14,16 +14,14 @@ const router = createBrowserRouter([
         path: "/shopLayouts",
         element: <ShopLayouts></ShopLayouts>,
     },
- {
-  path: "/ProductDetailsLayout",
-  element: <ProductDetailsLayout />,
-  children: [
     {
-      path: "ShoppingCart",
-      element: <ShoppingCart />
+        path: "/ProductDetailsLayout",
+        element: <ProductDetailsLayout />,
     },
-  ],
-},
+    {
+        path: "/ShoppingCart",
+        element: <ShoppingCart></ShoppingCart>,
+    }
 ]);
 
 export default router;

@@ -167,7 +167,7 @@ const ProductDetails = () => {
               Add to Wishlist
             </motion.button>
 
-            <Link to="./ProductDetailsLayout/ShoppingCart">       
+            <Link to="/ShoppingCart">       
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

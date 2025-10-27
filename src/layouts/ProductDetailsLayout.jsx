@@ -30,7 +30,6 @@ const ProductDetailsLayout = () => {
                 <section>
                     <DiscountProducts></DiscountProducts>
                 </section>
-                <Outlet></Outlet>
                 <footer>
                     <Footer></Footer>
                 </footer>
