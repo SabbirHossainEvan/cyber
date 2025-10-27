@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { BsTruck, BsCheckCircle, BsShieldCheck } from "react-icons/bs";
+import { Link } from "react-router";
 
 const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState("purple");
@@ -49,9 +50,8 @@ const ProductDetails = () => {
                 key={index}
                 src={img}
                 alt={`thumb-${index}`}
-                className={`w-16 h-16 object-cover rounded-lg cursor-pointer border ${
-                  selectedImage === index ? "border-black" : "border-gray-200"
-                }`}
+                className={`w-16 h-16 object-cover rounded-lg cursor-pointer border ${selectedImage === index ? "border-black" : "border-gray-200"
+                  }`}
                 whileHover={{ scale: 1.1, rotate: 3 }}
                 onClick={() => setSelectedImage(index)}
               />
@@ -101,9 +101,8 @@ const ProductDetails = () => {
               <motion.button
                 key={c.name}
                 onClick={() => setSelectedColor(c.name)}
-                className={`w-6 h-6 rounded-full border-2 ${
-                  selectedColor === c.name ? "border-black" : "border-gray-300"
-                }`}
+                className={`w-6 h-6 rounded-full border-2 ${selectedColor === c.name ? "border-black" : "border-gray-300"
+                  }`}
                 style={{ backgroundColor: c.code }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
@@ -119,11 +118,10 @@ const ProductDetails = () => {
                 onClick={() => setSelectedStorage(option)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-4 py-2 border rounded-md text-sm font-medium transition ${
-                  selectedStorage === option
+                className={`px-4 py-2 border rounded-md text-sm font-medium transition ${selectedStorage === option
                     ? "border-black bg-gray-100"
                     : "border-gray-300"
-                }`}
+                  }`}
               >
                 {option}
               </motion.button>
@@ -169,13 +167,16 @@ const ProductDetails = () => {
               Add to Wishlist
             </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex-1 bg-black text-white rounded-md py-3 hover:bg-gray-800 transition"
-            >
-              Add to Cart
-            </motion.button>
+            <Link to="./ProductDetailsLayout/ShoppingCart">       
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1 bg-black text-white text-sm p-10 rounded-md py-4 hover:bg-gray-800 transition"
+              >
+                Add to Cart
+              </motion.button>
+            </Link>
+
           </div>
 
           {/* Bottom Info */}

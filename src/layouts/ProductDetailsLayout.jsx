@@ -6,6 +6,7 @@ import ReviewsSection from '../components/ProductDetails/ReviewsSection';
 import UserReviewsSection from '../components/ProductDetails/UserReviewsSection';
 import DiscountProducts from '../components/DiscountProducts';
 import Footer from '../components/Footer';
+import { Outlet } from 'react-router-dom'
 
 const ProductDetailsLayout = () => {
     return (
@@ -29,6 +30,7 @@ const ProductDetailsLayout = () => {
                 <section>
                     <DiscountProducts></DiscountProducts>
                 </section>
+                <Outlet></Outlet>
                 <footer>
                     <Footer></Footer>
                 </footer>
