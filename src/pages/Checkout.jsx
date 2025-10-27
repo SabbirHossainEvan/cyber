@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
+import Navbar from "../components/NavBar";
+import AddressSelection from "../components/AddressSelection";
+import Footer from "../components/Footer";
 
 const Checkout = () => {
-    return (
-        <div>
-            <h1>Checkout</h1>
-        </div>
-    );
+  return (
+    <>
+      <Navbar />
+      <section>
+              <AddressSelection />
+      </section>
+
+      <Footer></Footer>
+    </>
+  );
 };
 
 export default Checkout;

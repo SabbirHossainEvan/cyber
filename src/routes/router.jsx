@@ -4,6 +4,7 @@ import ShopLayouts from "../layouts/ShopLayouts";
 import ProductDetailsLayout from "../layouts/ProductDetailsLayout";
 
 import ShoppingCart from "../pages/ShoppingCart";
+import Checkout from "../pages/Checkout";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
     {
         path: "/ShoppingCart",
         element: <ShoppingCart></ShoppingCart>,
-    }
+    },
+    {
+        path: "/checkout",
+        element: <Checkout></Checkout>,
+    },
 ]);
 
 export default router;
