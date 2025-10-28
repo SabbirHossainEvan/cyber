@@ -19,10 +19,10 @@ const ProductDetails = () => {
   ];
 
   const images = [
-    "/src/assets/ProductDetailsImage/Image.png",
-    "/src/assets/ProductDetailsImage/image 61.png",
-    "/src/assets/ProductDetailsImage/image 62.png",
-    "/src/assets/ProductDetailsImage/image 63.png",
+    "./ProductDetailsImage/Image.png",
+    "./ProductDetailsImage/image 61.png",
+    "./ProductDetailsImage/image 62.png",
+    "./ProductDetailsImage/image 63.png",
   ];
 
   const storageOptions = ["128GB", "256GB", "512GB", "1TB"];

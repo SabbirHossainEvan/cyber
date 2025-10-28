@@ -4,15 +4,15 @@ import { Heart } from "lucide-react";
 import { Link } from "react-router";
 
 const products = [
-  { id: 1, name: "Apple iPhone 14 Pro 512GB Gold (MQ233)", price: 1437, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (1).png" },
-  { id: 2, name: "Apple iPhone 11 128GB White (MQ233)", price: 510, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (2).png" },
-  { id: 3, name: "Apple iPhone 14 Pro 128GB Deep Purple (MQ093)", price: 1600, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (3).png" },
-  { id: 4, name: "Apple iPhone 13 mini 128GB Pink (MLK23)", price: 850, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (9).png" },
-  { id: 5, name: "Apple iPhone 14 Pro 256GB Space Black (MQ073)", price: 1399, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (10).png" },
-  { id: 6, name: "Apple iPhone 14 Pro 256GB Silver (MQ103)", price: 1399, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (11).png" },
-  { id: 7, name: "Apple iPhone 14 128GB Midnight (MQ3A3)", price: 999, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (12).png" },
-  { id: 8, name: "Apple iPhone 14 Plus 512GB Starlight (MQ513)", price: 1299, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (13).png" },
-  { id: 9, name: "Apple iPhone 15 Pro 512GB Blue Titanium (MT233)", price: 1699, image: "/src/assets/shopLayoutImage/Iphone 14 pro 1 (14).png" },
+  { id: 1, name: "Apple iPhone 14 Pro 512GB Gold (MQ233)", price: 1437, image: "./shopLayoutImage/Iphone 14 pro 1 (1).png" },
+  { id: 2, name: "Apple iPhone 11 128GB White (MQ233)", price: 510, image: "./shopLayoutImage/Iphone 14 pro 1 (2).png" },
+  { id: 3, name: "Apple iPhone 14 Pro 128GB Deep Purple (MQ093)", price: 1600, image: "./shopLayoutImage/Iphone 14 pro 1 (3).png" },
+  { id: 4, name: "Apple iPhone 13 mini 128GB Pink (MLK23)", price: 850, image: "./shopLayoutImage/Iphone 14 pro 1 (9).png" },
+  { id: 5, name: "Apple iPhone 14 Pro 256GB Space Black (MQ073)", price: 1399, image: "./shopLayoutImage/Iphone 14 pro 1 (10).png" },
+  { id: 6, name: "Apple iPhone 14 Pro 256GB Silver (MQ103)", price: 1399, image: "./shopLayoutImage/Iphone 14 pro 1 (11).png" },
+  { id: 7, name: "Apple iPhone 14 128GB Midnight (MQ3A3)", price: 999, image: "./shopLayoutImage/Iphone 14 pro 1 (12).png" },
+  { id: 8, name: "Apple iPhone 14 Plus 512GB Starlight (MQ513)", price: 1299, image: "./shopLayoutImage/Iphone 14 pro 1 (13).png" },
+  { id: 9, name: "Apple iPhone 15 Pro 512GB Blue Titanium (MT233)", price: 1699, image: "./shopLayoutImage/Iphone 14 pro 1 (14).png" },
 ];
 
 export default function ProductGrid() {
