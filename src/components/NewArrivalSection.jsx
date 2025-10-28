@@ -87,7 +87,7 @@ const NewArrivalSection = () => {
                             {product.liked ? <AiFillHeart className="text-red-500" /> : <AiOutlineHeart />}
                         </button>
 
-                        <img src={product.image} alt={product.name} className="mx-auto mb-4 w-48 h-48 " />
+                        <img src="./chemara.png" alt={product.name} className="mx-auto mb-4 w-48 h-48 " />
                         <h3 className="text-sm text-center text-gray-700 font-medium mb-2">{product.name}</h3>
                         <p className="text-center text-lg font-semibold mb-4">{product.price}</p>
                         <div className="flex justify-center">
