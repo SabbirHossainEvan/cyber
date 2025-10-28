@@ -7,21 +7,21 @@ const products = [
         id: 1,
         name: "Apple iPhone 14 Pro Max 128GB Deep Purple",
         price: "$900",
-        image: "./newArrivalSectionImage/Iphone 14 pro 1 (1).png",
+        image: "/src/assets/newArrivalSectionImage/Iphone 14 pro 1 (1).png",
         liked: false,
     },
     {
         id: 2,
         name: "Blackmagic Pocket Cinema Camera 6k",
         price: "$2535",
-        image: "./newArrivalSectionImage/chemara.png",
+        image: "/src/assets/newArrivalSectionImage/chemara.png",
         liked: false,
     },
     {
         id: 3,
         name: "Apple Watch Series 9 GPS 41mm Starlight Aluminium",
         price: "$399",
-        image: "./newArrivalSectionImage/Iphone 14 pro 1 (2).png",
+        image: "/src/assets/newArrivalSectionImage/Iphone 14 pro 1 (2).png",
 
         liked: false,
     },
@@ -30,28 +30,28 @@ const products = [
         name: "AirPods Max Silver Starlight Aluminium",
         price: "$549",
 
-        image: "/public/newArrivalSectionImage/Iphone 14 pro 1 (5).png",
+        image: "/src/assets/newArrivalSectionImage/Iphone 14 pro 1 (5).png",
         liked: false,
     },
     {
         id: 5,
         name: "Samsung Galaxy Watch6 Classic 47mm Black",
         price: "$369",
-        image: "/public/newArrivalSectionImage/watch.png",
+        image: "/src/assets/newArrivalSectionImage/watch.png",
         liked: false,
     },
     {
         id: 6,
         name: "Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
         price: "$1799",
-        image: "/public/newArrivalSectionImage/Iphone 14 pro 1 (3).png",
+        image: "/src/assets/newArrivalSectionImage/Iphone 14 pro 1 (3).png",
         liked: true,
     },
     {
         id: 7,
         name: "Galaxy Buds FE Graphite",
         price: "$99.99",
-        image: "/public/newArrivalSectionImage/Iphone 14 pro 1 (4).png",
+        image: "/src/assets/newArrivalSectionImage/Iphone 14 pro 1 (4).png",
 
         liked: false,
     },
@@ -60,7 +60,7 @@ const products = [
         name: "Apple iPad 9 10.2\" 64GB Wi-Fi Silver (MK2L3) 2021",
         price: "$398",
 
-        image: "/public/newArrivalSectionImage/Iphone 14 pro 1 (6).png",
+        image: "/src/assets/newArrivalSectionImage/Iphone 14 pro 1 (6).png",
         liked: false,
     },
 ];
