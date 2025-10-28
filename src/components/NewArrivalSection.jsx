@@ -60,7 +60,7 @@ const products = [
         name: "Apple iPad 9 10.2\" 64GB Wi-Fi Silver (MK2L3) 2021",
         price: "$398",
 
-        image: "./src/assets/newArrivalSectionImage/Iphone 14 pro 1 (6).png",
+        image: "./newArrivalSectionImage/Iphone 14 pro 1 (6).png",
         liked: false,
     },
 ];
