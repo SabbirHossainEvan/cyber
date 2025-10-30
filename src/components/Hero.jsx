@@ -9,7 +9,7 @@ import { Link } from 'react-router';
 const Hero = () => {
   return (
     <section className='bg-black text-white'>
-      <div className='grid grid-cols-1 md:grid-cols-2 p-4 gap-4 items-center max-w-7xl mx-auto pt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-2 p-4 md:p-0 gap-4 items-center max-w-7xl mx-auto pt-20'>
 
         {/* Left side (Text content) */}
         <div>
