@@ -72,7 +72,7 @@ const ProductShowcase = () => {
                 <motion.div
                     whileHover={{ scale: 1.03 }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    className="bg-gray-100 flex flex-col md:flex-row items-center justify-between p-4 md:p-0"
+                    className="bg-gray-100 flex flex-col md:flex-row items-center justify-between p-3 md:p-0"
                 >
                     <div className="md:ml-6 mt-6 md:mt-0 ">
                         <h2 className="text-6xl mb-2 ">Macbook <br /><span className="text-black font-bold">Air</span></h2>
