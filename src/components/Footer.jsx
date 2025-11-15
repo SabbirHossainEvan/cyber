@@ -20,7 +20,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-black text-gray-300 py-1 px-6 md:px-16 lg:px-28"
+      className="bg-black text-gray-300 py-10 px-6 md:px-16 lg:px-28"
     >
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 justify-center flax  mx-auto">
         {/* Brand Section */}
