@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 justify-center flax  mx-auto">
         {/* Brand Section */}
         <div className="col-span-1 md:col-span-2">
-          <h2 className="text-white text-2xl font-bold mb-3 mt-5">cyber</h2>
+          <h2 className="text-white text-2xl font-bold mb-4 mt-5">cyber</h2>
           <p className="text-sm leading-relaxed ">
             We are a residential interior design firm located in <br />Portland.
             Our boutique-studio offers more than you can imagine.
