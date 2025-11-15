@@ -31,7 +31,7 @@ const products = [
 
 const DiscountProducts = () => {
   return (
-    <section className="px-6 py-12 bg-white max-w-6xl mx-auto px-6">
+    <section className="px-6 py-12 bg-white max-w-6xl mx-auto">
       <motion.h2
         className="text-2xl sm:text-3xl font-semibold mb-10"
         initial={{ opacity: 0, x: -40 }}
