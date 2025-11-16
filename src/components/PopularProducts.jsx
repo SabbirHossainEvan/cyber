@@ -72,7 +72,7 @@ const PopularProducts = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.4 }}
             />
-            <h3 className="text-2xl font-semibold mb-4">{product.title}</h3>
+            <h3 className="text-2xl font-semibold mb-">{product.title}</h3>
             <p className="text-sm text-gray-500 dark:text-gray-300 mb-6 max-w-xs">
               {product.desc}
             </p>
