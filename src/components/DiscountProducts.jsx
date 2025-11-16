@@ -70,7 +70,7 @@ const DiscountProducts = () => {
               transition={{ duration: 0.3 }}
             />
 
-            <h3 className="text-base font-medium text-gray-700 mb-2">
+            <h3 className="text-base font-medium text-gray-700 mb-">
               {product.name}
             </h3>
             <p className="text-xl font-semibold text-black mb-4">{product.price}</p>
