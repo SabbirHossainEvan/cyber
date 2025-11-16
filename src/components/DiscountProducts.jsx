@@ -46,7 +46,7 @@ const DiscountProducts = () => {
         {products.map((product, i) => (
           <motion.div
             key={product.id}
-            className="relative bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300"
+            className="relative bg-gray-50 rounded-xl p- text-center shadow-sm hover:shadow-lg transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
