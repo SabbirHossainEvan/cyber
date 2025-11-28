@@ -8,7 +8,7 @@ export default function Contact() {
         <header>
             <Navbar></Navbar>
         </header>
-        <footer className='pt-34'>
+        <footer className='pt-30'>
             <Footer></Footer>
         </footer>
     </div>
