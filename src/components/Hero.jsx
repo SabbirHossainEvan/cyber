@@ -44,7 +44,7 @@ const Hero = () => {
           <motion.img
             src={heroImage}
             alt="iPhone 14 Pro"
-            className='w-80 md:w-96'
+            className='w-80 md:w-96 mt-20'
             initial={{ y: 0 }}
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
